@@ -1,29 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
-<meta name="viewport"
-      content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>AI Payment Sound Box Flasher</title>
+<title>AI Payment Sound Box - Firmware Installer</title>
 
-<script type="module"
-src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module">
+<script
+  type="module"
+  src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module">
 </script>
 
-<link rel="preconnect"
-href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link rel="preconnect"
-href="https://fonts.gstatic.com"
-crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-
 *{
     margin:0;
     padding:0;
@@ -31,10 +24,9 @@ rel="stylesheet">
 }
 
 body{
-    font-family:Inter,sans-serif;
+    font-family:'Inter',sans-serif;
     background:#0f172a;
     color:#f8fafc;
-    min-height:100vh;
     line-height:1.6;
 }
 
@@ -66,8 +58,7 @@ body{
     border-radius:18px;
     padding:30px;
     margin-bottom:25px;
-    box-shadow:
-        0 4px 12px rgba(0,0,0,.25);
+    box-shadow:0 4px 12px rgba(0,0,0,0.25);
 }
 
 .card h2{
@@ -77,41 +68,45 @@ body{
 
 .info-grid{
     display:grid;
-    grid-template-columns:
-        repeat(auto-fit,minmax(220px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
     gap:20px;
 }
 
 .info-box{
     background:#0f172a;
-    padding:20px;
-    border-radius:12px;
     border:1px solid #334155;
+    border-radius:12px;
+    padding:20px;
 }
 
 .info-box h3{
     color:#38bdf8;
     margin-bottom:8px;
+    font-size:16px;
 }
 
 .flash-area{
     text-align:center;
-    padding:30px;
+    padding:20px;
 }
 
-esp-web-install-button{
-    --esp-tools-button-color: white;
+.flash-area p{
+    margin-bottom:25px;
+    color:#cbd5e1;
 }
 
-esp-web-install-button::part(button){
-    background:
-      linear-gradient(135deg,
-      #2563eb,
-      #3b82f6);
+/* REAL ESP WEB TOOLS BUTTON */
+
+esp-web-install-button button{
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #3b82f6
+    );
+
+    color:#ffffff;
 
     border:none;
-
-    color:white;
 
     padding:16px 34px;
 
@@ -121,27 +116,32 @@ esp-web-install-button::part(button){
 
     font-weight:600;
 
+    font-family:'Inter',sans-serif;
+
     cursor:pointer;
 
     transition:all .2s ease;
 
     box-shadow:
-      0 4px 14px
-      rgba(37,99,235,.35);
+        0 4px 14px rgba(37,99,235,.35);
 }
 
-esp-web-install-button::part(button):hover{
+esp-web-install-button button:hover{
     transform:translateY(-2px);
+
     box-shadow:
-      0 8px 20px
-      rgba(37,99,235,.4);
+        0 8px 20px rgba(37,99,235,.45);
+}
+
+esp-web-install-button button:active{
+    transform:translateY(0);
 }
 
 ol{
     padding-left:20px;
 }
 
-li{
+ol li{
     margin-bottom:10px;
 }
 
@@ -150,11 +150,19 @@ li{
     border:1px solid #ef4444;
 }
 
+.warning ul{
+    padding-left:20px;
+}
+
+.warning li{
+    margin-bottom:8px;
+}
+
 .tutorial-btn{
     display:inline-block;
     margin-top:15px;
     padding:12px 24px;
-    background:#1e293b;
+    background:#2563eb;
     color:white;
     text-decoration:none;
     border-radius:10px;
@@ -162,23 +170,25 @@ li{
 }
 
 .tutorial-btn:hover{
-    background:#334155;
+    background:#3b82f6;
 }
 
 footer{
+    margin-top:50px;
     text-align:center;
     color:#64748b;
-    margin-top:50px;
 }
 
 @media(max-width:768px){
 
-.hero h1{
-    font-size:30px;
-}
+    .hero h1{
+        font-size:30px;
+    }
 
+    .card{
+        padding:20px;
+    }
 }
-
 </style>
 </head>
 
@@ -186,120 +196,112 @@ footer{
 
 <div class="container">
 
-<div class="hero">
+    <div class="hero">
+        <h1>AI Payment Sound Box</h1>
+        <p>Browser-Based Firmware Installer</p>
+        <p>by techiesms</p>
+    </div>
 
-<h1>AI Payment Sound Box</h1>
+    <div class="card">
 
-<p>
-Browser-Based Firmware Installer
-</p>
+        <h2>Supported Device</h2>
 
-<p>
-by techiesms
-</p>
+        <div class="info-grid">
 
-</div>
+            <div class="info-box">
+                <h3>Board</h3>
+                ESP32-S3
+            </div>
 
-<div class="card">
+            <div class="info-box">
+                <h3>Chip Family</h3>
+                ESP32-S3
+            </div>
 
-<h2>Supported Device</h2>
+            <div class="info-box">
+                <h3>Installation</h3>
+                Browser Flashing
+            </div>
 
-<div class="info-grid">
+        </div>
 
-<div class="info-box">
-<h3>Board</h3>
-ESP32-S3
-</div>
+    </div>
 
-<div class="info-box">
-<h3>Chip Family</h3>
-ESP32-S3
-</div>
+    <div class="card flash-area">
 
-<div class="info-box">
-<h3>Method</h3>
-Web Serial Flashing
-</div>
+        <h2>Install Firmware</h2>
 
-</div>
+        <p>
+            Connect your AI Payment Sound Box via USB and click below.
+        </p>
 
-</div>
+        <!-- FULLY FUNCTIONAL ESP WEB TOOLS BUTTON -->
 
-<div class="card flash-area">
+        <esp-web-install-button manifest="manifest.json">
+            <button slot="activate">
+                🚀 Flash Firmware
+            </button>
+        </esp-web-install-button>
 
-<h2>Install Firmware</h2>
+    </div>
 
-<p style="margin-bottom:25px">
-Connect your device via USB and click below.
-</p>
+    <div class="card">
 
-<esp-web-install-button
-manifest="manifest.json">
-</esp-web-install-button>
+        <h2>Installation Instructions</h2>
 
-</div>
+        <ol>
+            <li>Use Google Chrome, Microsoft Edge, Brave, or Opera.</li>
+            <li>Connect your ESP32-S3 board using a USB data cable.</li>
+            <li>Close Arduino IDE Serial Monitor if open.</li>
+            <li>Click the Flash Firmware button.</li>
+            <li>Select the correct serial port.</li>
+            <li>Wait for firmware upload to complete.</li>
+            <li>The device will restart automatically.</li>
+        </ol>
 
-<div class="card">
+    </div>
 
-<h2>Installation Steps</h2>
+    <div class="card">
 
-<ol>
-<li>Use Chrome or Edge browser.</li>
-<li>Connect ESP32-S3 via USB.</li>
-<li>Close Arduino IDE or Serial Monitor.</li>
-<li>Click Install Firmware.</li>
-<li>Select the COM port.</li>
-<li>Wait for flashing to complete.</li>
-<li>Device will reboot automatically.</li>
-</ol>
+        <h2>Tutorial Video</h2>
 
-</div>
+        <p>
+            Watch the complete setup and installation tutorial.
+        </p>
 
-<div class="card">
+        <a
+            class="tutorial-btn"
+            href="#"
+            target="_blank">
+            Watch Tutorial
+        </a>
 
-<h2>Tutorial Video</h2>
+    </div>
 
-<p>
-Watch the complete setup tutorial.
-</p>
+    <div class="card warning">
 
-<a class="tutorial-btn"
-href="#"
-target="_blank">
-Watch Tutorial
-</a>
+        <h2>Troubleshooting</h2>
 
-</div>
+        <ul>
+            <li>Use a USB data cable, not a charging cable.</li>
+            <li>Install CP210x or CH340 USB drivers.</li>
+            <li>Close all serial monitor applications.</li>
+            <li>Try another USB port.</li>
+            <li>Hold BOOT while connecting if flashing fails.</li>
+            <li>Refresh the page and try again.</li>
+            <li>Use the latest version of Chrome or Edge.</li>
+        </ul>
 
-<div class="card warning">
+    </div>
 
-<h2>Troubleshooting</h2>
-
-<ul>
-
-<li>Try another USB cable.</li>
-
-<li>Install CP210x or CH340 drivers.</li>
-
-<li>Close Serial Monitor applications.</li>
-
-<li>Hold BOOT while connecting.</li>
-
-<li>Press RESET after selecting COM port.</li>
-
-<li>Refresh browser and retry.</li>
-
-</ul>
-
-</div>
-
-<footer>
-
-AI Payment Sound Box © 2026
-<br>
-Powered by ESP Web Tools & techiesms
-
-</footer>
+    <footer>
+        <p>
+            AI Payment Sound Box © 2026
+        </p>
+        <p>
+            Powered by ESP Web Tools • techiesms
+        </p>
+    </footer>
 
 </div>
 
