@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1">
+
+<title>AI Payment Sound Box Flasher</title>
+
+<script type="module"
+src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module">
+</script>
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Inter,sans-serif;
+    background:#0f172a;
+    color:#f8fafc;
+    min-height:100vh;
+    line-height:1.6;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+.hero{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.hero h1{
+    font-size:42px;
+    font-weight:700;
+    margin-bottom:10px;
+}
+
+.hero p{
+    color:#94a3b8;
+    font-size:18px;
+}
+
+.card{
+    background:#111827;
+    border:1px solid #1e293b;
+    border-radius:18px;
+    padding:30px;
+    margin-bottom:25px;
+    box-shadow:
+        0 4px 12px rgba(0,0,0,.25);
+}
+
+.card h2{
+    margin-bottom:18px;
+    font-size:22px;
+}
+
+.info-grid{
+    display:grid;
+    grid-template-columns:
+        repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.info-box{
+    background:#0f172a;
+    padding:20px;
+    border-radius:12px;
+    border:1px solid #334155;
+}
+
+.info-box h3{
+    color:#38bdf8;
+    margin-bottom:8px;
+}
+
+.flash-area{
+    text-align:center;
+    padding:30px;
+}
+
+esp-web-install-button{
+    --esp-tools-button-color: white;
+}
+
+esp-web-install-button::part(button){
+    background:
+      linear-gradient(135deg,
+      #2563eb,
+      #3b82f6);
+
+    border:none;
+
+    color:white;
+
+    padding:16px 34px;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:all .2s ease;
+
+    box-shadow:
+      0 4px 14px
+      rgba(37,99,235,.35);
+}
+
+esp-web-install-button::part(button):hover{
+    transform:translateY(-2px);
+    box-shadow:
+      0 8px 20px
+      rgba(37,99,235,.4);
+}
+
+ol{
+    padding-left:20px;
+}
+
+li{
+    margin-bottom:10px;
+}
+
+.warning{
+    background:#3b1d1d;
+    border:1px solid #ef4444;
+}
+
+.tutorial-btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:12px 24px;
+    background:#1e293b;
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+    transition:.2s;
+}
+
+.tutorial-btn:hover{
+    background:#334155;
+}
+
+footer{
+    text-align:center;
+    color:#64748b;
+    margin-top:50px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:30px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="hero">
+
+<h1>AI Payment Sound Box</h1>
+
+<p>
+Browser-Based Firmware Installer
+</p>
+
+<p>
+by techiesms
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>Supported Device</h2>
+
+<div class="info-grid">
+
+<div class="info-box">
+<h3>Board</h3>
+ESP32-S3
+</div>
+
+<div class="info-box">
+<h3>Chip Family</h3>
+ESP32-S3
+</div>
+
+<div class="info-box">
+<h3>Method</h3>
+Web Serial Flashing
+</div>
+
+</div>
+
+</div>
+
+<div class="card flash-area">
+
+<h2>Install Firmware</h2>
+
+<p style="margin-bottom:25px">
+Connect your device via USB and click below.
+</p>
+
+<esp-web-install-button
+manifest="manifest.json">
+</esp-web-install-button>
+
+</div>
+
+<div class="card">
+
+<h2>Installation Steps</h2>
+
+<ol>
+<li>Use Chrome or Edge browser.</li>
+<li>Connect ESP32-S3 via USB.</li>
+<li>Close Arduino IDE or Serial Monitor.</li>
+<li>Click Install Firmware.</li>
+<li>Select the COM port.</li>
+<li>Wait for flashing to complete.</li>
+<li>Device will reboot automatically.</li>
+</ol>
+
+</div>
+
+<div class="card">
+
+<h2>Tutorial Video</h2>
+
+<p>
+Watch the complete setup tutorial.
+</p>
+
+<a class="tutorial-btn"
+href="#"
+target="_blank">
+Watch Tutorial
+</a>
+
+</div>
+
+<div class="card warning">
+
+<h2>Troubleshooting</h2>
+
+<ul>
+
+<li>Try another USB cable.</li>
+
+<li>Install CP210x or CH340 drivers.</li>
+
+<li>Close Serial Monitor applications.</li>
+
+<li>Hold BOOT while connecting.</li>
+
+<li>Press RESET after selecting COM port.</li>
+
+<li>Refresh browser and retry.</li>
+
+</ul>
+
+</div>
+
+<footer>
+
+AI Payment Sound Box © 2026
+<br>
+Powered by ESP Web Tools & techiesms
+
+</footer>
+
+</div>
+
+</body>
+</html>
