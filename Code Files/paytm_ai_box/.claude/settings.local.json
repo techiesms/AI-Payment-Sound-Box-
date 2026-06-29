@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp /tmp/sbv3/soundboxv3/paytm_ai_box/mqtt_payment.ino /tmp/sb_mqtt.ino)",
+      "Bash(cp /tmp/sbv3/soundboxv3/paytm_ai_box/paytm_ai_box.ino /tmp/sb_main.ino)",
+      "Bash(cp /tmp/sbv3/soundboxv3/paytm_ai_box/config.h /tmp/sb_config.h)"
+    ]
+  }
+}

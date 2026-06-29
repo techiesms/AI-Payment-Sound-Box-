@@ -1,0 +1,10 @@
+{
+  "additionalFiles": "..\\..\\..,..\\..",
+  "builtInLibrariesFolders": "C:\\Users\\devbh\\AppData\\Local\\Arduino15\\libraries",
+  "compiler.optimization_flags": "-Os",
+  "customBuildProperties": "build.warn_data_percentage=75",
+  "fqbn": "esp32:esp32:esp32s3:UploadSpeed=921600,USBMode=hwcdc,CDCOnBoot=default,MSCOnBoot=default,DFUOnBoot=default,UploadMode=default,CPUFreq=240,FlashMode=qio,FlashSize=16M,PartitionScheme=fatflash,DebugLevel=none,PSRAM=opi,LoopCore=1,EventsCore=1,EraseFlash=none,JTAGAdapter=default",
+  "hardwareFolders": "c:\\Users\\devbh\\AppData\\Local\\Arduino15\\packages",
+  "otherLibrariesFolders": "c:\\Users\\devbh\\Documents\\Arduino\\libraries",
+  "sketchLocation": "C:\\Users\\devbh\\Documents\\Arduino\\paytm_ai_box"
+}
